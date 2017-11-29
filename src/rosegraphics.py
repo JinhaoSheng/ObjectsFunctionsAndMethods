@@ -1708,7 +1708,7 @@ class _RoseCanvasStub(RoseCanvas):
 
 class TurtleWindow(object):
 
-    def __init__(self):
+    def __init__(self) -> object:
         self._screen = turtle.Screen()
         turtle.Turtle._screen = self._screen
 
@@ -1796,6 +1796,7 @@ class SimpleTurtle(object):
           to do all the work on behalf of this SimpleTurtle.  This (purposely)
           restricts what this SimpleTurtle knows and can do.
 
+        :rtype: object
         :type shape: str
         """
         self.speed = 1

@@ -4,12 +4,12 @@ Demonstrates using (calling) FUNCTIONS and using (calling) METHODS:
   -- how they differ.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Jinhao Sheng.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   READ this comment, ASKING QUESTIONS as needed to understand it.
 #
 #   For objects that are CONSTRUCTED, we use the DOT notation
@@ -74,14 +74,16 @@ def main():
     # Make the animation go much faster.
     #   First number:  bigger means faster.
     #   Second number: bigger means slower.
-    window.tracer(1, 1)
+    #window.tracer(1, 1)
 
-    jump_and_move_turtle(100, 50, 200, -100)
-    turtle = rg.SimpleTurtle('square')
-    draw_many_squares(turtle, 3, 75, 15)
-    turtle3()
+    #jump_and_move_turtle(100, 50, 200, -100)
+    #turtle = rg.SimpleTurtle('square')
+    #draw_many_squares(turtle, 3, 75, 15)
+    #turtle3()
 
     # When the TODOs ask you to test YOUR code, put YOUR tests here:
+    try_methods()
+    try_functions()
 
 
     window.close_on_mouse_click()
@@ -162,6 +164,13 @@ def turtle3():
 
 
 def try_methods():
+    michael = rg.SimpleTurtle()
+    michael.pen = rg.Pen('brown', 5)
+    michael.forward(150)
+    michael.left(90)
+    michael.forward(50)
+    michael.backward(100)
+
     """
     Constructs a SimpleTurtle and sets its   pen   to a new rg.Pen
     that is 'brown' with thickness 5.
@@ -179,6 +188,18 @@ def try_methods():
 
 
 def try_functions():
+    dave = rg.SimpleTurtle()
+    tim = rg.SimpleTurtle('square')
+    tom = rg.SimpleTurtle('triangle')
+    dave.pen = rg.Pen('red', 4)
+    point1 = rg.Point(300,30)
+    point2 = rg.Point(200,100)
+
+    dave.pen_up()
+    dave.go_to(point2)
+    dave.pen_down()
+    dave.go_to(point1)
+
     """
     Causes several SimpleTurtles to do the following:
      -- One jumps to (200, 100), then moves (while drawing) to (300, 30)
