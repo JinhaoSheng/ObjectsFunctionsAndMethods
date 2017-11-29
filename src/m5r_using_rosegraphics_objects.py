@@ -94,7 +94,6 @@ def example2():
     # Construct the window in which objects will be drawn.
     # ------------------------------------------------------------------
     window = rg.RoseWindow()
-
     # ------------------------------------------------------------------
     # Construct some rg.Point objects.
     # Note: the y-axis goes DOWN from the TOP.
